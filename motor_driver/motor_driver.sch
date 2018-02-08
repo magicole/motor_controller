@@ -404,7 +404,7 @@ $EndComp
 Text Notes 5200 1700 0    60   ~ 0
 +3V
 Text Notes 8350 4100 0    60   ~ 0
-+3V
++5V
 Text Notes 8350 4000 0    60   ~ 0
 GND
 Text Notes 8350 3800 0    60   ~ 0
@@ -752,10 +752,6 @@ Connection ~ 6050 3900
 Wire Wire Line
 	7850 4000 8550 4000
 Wire Wire Line
-	8200 4100 8550 4100
-Wire Wire Line
-	8200 1700 8200 4100
-Wire Wire Line
 	3050 1700 8200 1700
 Wire Wire Line
 	6000 1700 6000 2200
@@ -796,7 +792,7 @@ Wire Wire Line
 Wire Wire Line
 	2650 3850 4050 3850
 Wire Wire Line
-	4050 3850 4050 4050
+	4050 2740 4050 4050
 Wire Wire Line
 	4050 4050 4450 4050
 Wire Wire Line
@@ -931,4 +927,19 @@ Connection ~ 7150 1700
 Wire Wire Line
 	7150 2040 7150 2130
 Connection ~ 7150 2130
+Text Notes 6400 7220 0    60   ~ 0
+The sense resistor was sized at 0.04 ohms. This would allow for a max voltage of \n0.1 volts. This will give us enough resolution on the ADC for effective current\nsensing. A 10uF and two 1uF capacitors are used on the 3.3V line for voltage\nsmoothing and for the various LEDs powered by the rail.
+Wire Wire Line
+	8200 2950 8200 1700
+Wire Wire Line
+	4050 2740 6990 2740
+Wire Wire Line
+	6990 2740 6990 3240
+Wire Wire Line
+	6990 3240 7450 3240
+Wire Wire Line
+	7450 3240 7450 4100
+Wire Wire Line
+	7450 4100 8550 4100
+Connection ~ 4050 3850
 $EndSCHEMATC
